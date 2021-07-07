@@ -1,0 +1,23 @@
+@import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss'; /* import Cedar tokens */
+@import '~@rei/cdr-component-variables/dist/scss/index.scss'; /* import Cedar component variables */
+
+// Example CSS selector definitions
+
+.unique-text-class {
+  color: $cdr-color-text-primary; // apply a cedar token to an element
+  @include cdr-text-heading-serif-700; // include a mixin from cedar tokens on an element
+}
+
+
+// if styling generic HTML elements, you may want to scope your styles if possible to only target elements within a given container element
+#scoped-container-element {
+  button {
+    @include cdr-button-base-mixin; // apply a mixin from component variables to an element
+    @include cdr-button-primary-mixin; //
+  }
+}
+
+.unique-button-secondary-class {
+  @include cdr-button-base-mixin; // apply a mixin from component variables to an element
+  @include cdr-button-secondary-mixin; //
+}
